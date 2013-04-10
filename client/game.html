@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>alon balloon</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+		<style>
+			html, body {
+				width: 100%;
+				height: 100%;
+			}
+
+			body {
+				background-color: #ffffff;
+				margin: 0;
+				overflow: hidden;
+				font-family: arial;
+			}
+
+			#blocker {
+
+				position: absolute;
+
+				width: 100%;
+				height: 100%;
+
+				background-color: rgba(0,0,0,0.5);
+
+			}
+
+			#instructions {
+
+				width: 100%;
+				height: 100%;
+
+				display: -webkit-box;
+				display: -moz-box;
+				display: box;
+
+				-webkit-box-orient: horizontal;
+				-moz-box-orient: horizontal;
+				box-orient: horizontal;
+
+				-webkit-box-pack: center;
+				-moz-box-pack: center;
+				box-pack: center;
+
+				-webkit-box-align: center;
+				-moz-box-align: center;
+				box-align: center;
+
+				color: #ffffff;
+				text-align: center;
+
+				cursor: pointer;
+
+			}
+
+			#stats { position: absolute; top:0; left: 0 }
+			#stats #fps { background: transparent !important }
+			#stats #fps #fpsText { color: #aaa !important }
+			#stats #fps #fpsGraph { display: none }
+		</style>
+	</head>
+
+	<body>
+		
+		<script src="build/socket.io.js"></script>
+		<script src="build/mmotest1.min.js"></script>
+		
+		<!--
+		<script src="src/libs/socket.io.js"></script>
+		<script src="src/libs/three.js"></script>
+		<script src="src/libs/stats.js"></script>
+		
+		<script src="src/mmotest1.js"></script>	
+		
+		<script src="src/world/Input.js"></script>
+		<script src="src/world/Component.js"></script>
+		
+		<script src="src/world/NetworkManager.js"></script>
+		
+		<script src="src/world/Game.js"></script>
+		
+		<script src="src/world/Camera.js"></script>		
+		<script src="src/world/Ground.js"></script>	
+
+		<script src="src/world/Entity.js"></script>		
+		<script src="src/world/AnimatedEntity.js"></script>		
+		<script src="src/world/Character.js"></script>
+		-->
+	</body>
+</html>

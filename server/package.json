@@ -1,0 +1,11 @@
+{
+  "name": "mmotest1-server",
+  "version": "0.0.1",
+  "dependencies": {
+    "socket.io": "latest"
+  },
+  "engines": {
+    "node": "latest",
+    "npm": "latest"
+  }
+}
