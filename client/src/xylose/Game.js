@@ -1,8 +1,8 @@
-MMOTest.Game = function (container) {
+Xylose.Game = function (container) {
 	this.clock = new THREE.Clock();
 	this.entities = [];
 	
-	this.input = new MMOTest.Input();
+	this.input = new Xylose.Input();
 
 	this.projector = new THREE.Projector();
 	
@@ -19,9 +19,9 @@ MMOTest.Game = function (container) {
 	this.renderer.gammaOutput = true;
 	this.renderer.shadowMapEnabled = true;	
 	
-	this.camera = new MMOTest.Camera(this, 45, 1, 4000);
-	this.ground = new MMOTest.Ground(this);
-	this.networkManager = new MMOTest.NetworkManager(this);
+	this.camera = new Xylose.Camera(this, 45, 1, 4000);
+	this.ground = new Xylose.Ground(this);
+	this.networkManager = new Xylose.NetworkManager(this);
 	
 	var that = this;
 	window.addEventListener('resize', function (event) {
@@ -32,7 +32,7 @@ MMOTest.Game = function (container) {
 	}, false);
 };
 
-MMOTest.Game.prototype = {
+Xylose.Game.prototype = {
 	getInput: function () {
 		return this.input;
 	},

@@ -1,14 +1,14 @@
-MMOTest.Entity = function (game, modelPath, texturePath, scale) {
-	MMOTest.Component.call(this, game);
+Xylose.Entity = function (game, modelPath, texturePath, scale) {
+	Xylose.Component.call(this, game);
 	
 	this.modelPath = modelPath;
 	this.texturePath = texturePath;
 	this.scale = scale;
 };
 
-MMOTest.Entity.prototype = Object.create(MMOTest.Component.prototype);
+Xylose.Entity.prototype = Object.create(Xylose.Component.prototype);
 
-MMOTest.Entity.prototype.loadContent = function (callback) {
+Xylose.Entity.prototype.loadContent = function (callback) {
 	var mapping = new THREE.UVMapping();
 	var that = this;
 	var texture = THREE.ImageUtils.loadTexture(this.texturePath, mapping, function () {

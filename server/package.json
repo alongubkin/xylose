@@ -1,6 +1,6 @@
 {
-  "name": "mmotest1-server",
-  "version": "0.0.1",
+  "name": "xylose-server",
+  "version": "1.0.0",
   "dependencies": {
     "socket.io": "latest"
     "three": "latest",

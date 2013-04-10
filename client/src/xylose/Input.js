@@ -1,4 +1,4 @@
-MMOTest.Keys = {
+Xylose.Keys = {
 	left: 37,
 	up: 38,
 	right: 39,
@@ -9,7 +9,7 @@ MMOTest.Keys = {
 	d: 68
 };
 
-MMOTest.Input = function () {
+Xylose.Input = function () {
 	var scope = this;
 	this.pressedKeys = [];
 
@@ -29,7 +29,7 @@ MMOTest.Input = function () {
 	document.addEventListener('keyup', onKeyUp, false);	
 };
 
-MMOTest.Input.prototype.isKeyDown = function (key) {
+Xylose.Input.prototype.isKeyDown = function (key) {
 	for (var i = 0; i < this.pressedKeys.length; i++) {
 		if (key === this.pressedKeys[i])
 			return true;

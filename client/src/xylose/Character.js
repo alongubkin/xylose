@@ -1,5 +1,5 @@
-MMOTest.Character = function (game) {
-	MMOTest.AnimatedEntity.call(this, 
+Xylose.Character = function (game) {
+	Xylose.AnimatedEntity.call(this, 
 		game,
 		"assets/models/animated/ogro/ogro-light.js",
 		"assets/models/animated/ogro/skins/grok.jpg",
@@ -18,7 +18,7 @@ MMOTest.Character = function (game) {
 	this.walkTo = null;
 };
 
-MMOTest.Character.prototype = Object.create(MMOTest.AnimatedEntity.prototype);
+Xylose.Character.prototype = Object.create(Xylose.AnimatedEntity.prototype);
 /*
 Character.prototype.loadContent = function (callback) { 
 	var scope = this;
@@ -41,7 +41,7 @@ Character.prototype.loadContent = function (callback) {
 	});
 };
 */
-MMOTest.Character.prototype.update = function (delta) {
+Xylose.Character.prototype.update = function (delta) {
 	if (this.walkTo) {
 		if (Math.abs(this.walkTo.distanceTo(this.root.position)) <= 4) {
 			this.setAnimation(this.animations.idle);
@@ -57,6 +57,6 @@ MMOTest.Character.prototype.update = function (delta) {
 	}
 };
 
-MMOTest.Character.prototype.walk = function (target) {
+Xylose.Character.prototype.walk = function (target) {
 	this.walkTo = target;
 }

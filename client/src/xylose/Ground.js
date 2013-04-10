@@ -1,10 +1,10 @@
-MMOTest.Ground = function (game) { 
+Xylose.Ground = function (game) { 
 	this.game = game;
 }
 
-MMOTest.Ground.prototype = Object.create(MMOTest.Component.prototype);
+Xylose.Ground.prototype = Object.create(Xylose.Component.prototype);
 
-MMOTest.Ground.prototype.loadContent = function () {
+Xylose.Ground.prototype.loadContent = function () {
 	this.game.getScene().add( new THREE.AmbientLight( 0xffffff ) );
 
 	var light = new THREE.SpotLight( 0xffffff, 2, 4000 );

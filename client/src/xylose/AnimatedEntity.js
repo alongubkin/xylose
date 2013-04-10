@@ -1,5 +1,5 @@
-MMOTest.AnimatedEntity = function (game, modelPath, texturePath, scale, animations, defaultAnimation) {
-	MMOTest.Entity.call(this, game, modelPath, texturePath, scale);
+Xylose.AnimatedEntity = function (game, modelPath, texturePath, scale, animations, defaultAnimation) {
+	Xylose.Entity.call(this, game, modelPath, texturePath, scale);
 	
 	this.animations = animations;
 	this.defaultAnimation = defaultAnimation;
@@ -7,11 +7,11 @@ MMOTest.AnimatedEntity = function (game, modelPath, texturePath, scale, animatio
 	this.transitionFrames = 15;
 };
 
-MMOTest.AnimatedEntity.prototype = Object.create(MMOTest.Entity.prototype);
+Xylose.AnimatedEntity.prototype = Object.create(Xylose.Entity.prototype);
 
-MMOTest.AnimatedEntity.prototype.loadContent = function (callback) {
+Xylose.AnimatedEntity.prototype.loadContent = function (callback) {
 	var scope = this;
-	MMOTest.Entity.prototype.loadContent.call(this, function () {
+	Xylose.Entity.prototype.loadContent.call(this, function () {
 		scope.meshBody.autoCreateAnimations(6);
 		scope.setAnimation(scope.defaultAnimation);
 		
@@ -19,7 +19,7 @@ MMOTest.AnimatedEntity.prototype.loadContent = function (callback) {
 	});
 };
 
-MMOTest.AnimatedEntity.prototype.draw = function (delta) {
+Xylose.AnimatedEntity.prototype.draw = function (delta) {
 	var mix = 1;
 
 	if (this.blendCounter > 0) {
@@ -35,7 +35,7 @@ MMOTest.AnimatedEntity.prototype.draw = function (delta) {
 	}
 };
 
-MMOTest.AnimatedEntity.prototype.setAnimation = function (animationName) {
+Xylose.AnimatedEntity.prototype.setAnimation = function (animationName) {
 	if (this.meshBody && this.activeAnimation !== animationName) {
 		this.meshBody.setAnimationWeight(animationName, 0);	
 		this.meshBody.playAnimation(animationName);

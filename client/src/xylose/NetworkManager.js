@@ -1,7 +1,7 @@
-MMOTest.NetworkManager = function (game) {
+Xylose.NetworkManager = function (game) {
 	console.log("NetworkManager");
 	
-	var socket = io.connect('http://212.179.18.73:8763');
+	var socket = io.connect('http://localhost:8763');
 	socket.emit('login', 'alon', '');
 	
 	var networkEntities = [];
@@ -10,7 +10,7 @@ MMOTest.NetworkManager = function (game) {
 	function spawn(player, control) {
 		console.log('spawn');
 		
-		var character = new MMOTest.Character(game);
+		var character = new Xylose.Character(game);
 		character.loadContent(function () {
 			if (control)
 				game.getCamera().follow(character);

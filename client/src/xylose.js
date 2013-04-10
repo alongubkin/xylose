@@ -1,4 +1,4 @@
-var MMOTest = {};
+var Xylose = {};
 
 window.onload = function () {
 	var container = document.createElement('div');
@@ -7,7 +7,7 @@ window.onload = function () {
 	var stats = new Stats();
 	container.appendChild(stats.domElement);
 	
-	var game = new MMOTest.Game(container);
+	var game = new Xylose.Game(container);
 	game.loadContent();
 	
 	function render() {
