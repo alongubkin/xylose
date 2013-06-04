@@ -2,7 +2,7 @@
   "name": "xylose-server",
   "version": "1.0.0",
   "dependencies": {
-    "socket.io": "latest"
+    "socket.io": "latest",
     "three": "latest",
     "underscore": "latest"
   },
