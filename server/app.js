@@ -9,24 +9,20 @@ io.sockets.on('connection', function (socket) {
 		var playerIndex = players.length;
 		players[playerIndex] = { index: playerIndex, name: username, position: new THREE.Vector3(0, 36, 0) };
 		
-		socket.set('index', playerIndex, function () {
-			players[playerIndex].ready = true;
-			socket.emit('spawn_myself', players[playerIndex]);
-		});
+		socket.index = playerIndex;
+		players[playerIndex].ready = true;
+		socket.emit('spawn_myself', players[playerIndex]);
 	});
 	
 	socket.on('walk', function (target) {
-		socket.get('index', function (err, playerIndex) {
-			var player = players[playerIndex];
-			if (player && player.ready)
-				player.walkTo = new THREE.Vector3(target.x, target.y, target.z);
-		});
+		var player = players[socket.index];
+		if (player && player.ready) {
+			player.walkTo = new THREE.Vector3(target.x, target.y, target.z);
+		}
 	});
 	
 	socket.on('disconnect', function () {
-		socket.get('index', function (err, playerIndex) {
-			delete players[playerIndex];
-		});
+		delete players[socket.index];
 	});
 });
 
